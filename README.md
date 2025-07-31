@@ -88,7 +88,7 @@ The deployment process presented significant challenges with the traditional Wak
 
 For high availability and performance, this project includes a custom load balancer that distributes traffic across multiple web servers.
 
-### 🚀 Live Services
+### Live Services
 
 **Load Balancer**: [https://arnoldeloibm-lb.onrender.com](https://arnoldeloibm-lb.onrender.com)
 - **GitHub Repository**: [https://github.com/ArnoldEloiBM/arnoldeloibm-lb](https://github.com/ArnoldEloiBM/arnoldeloibm-lb)
