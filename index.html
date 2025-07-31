@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Any Country</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar"><h1>Get Any Country</h1></div>
+
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search country...">
+    <button id="searchBtn">Search</button>
+
+    <select id="regionFilter">
+      <option value="">All Regions</option>
+    </select>
+
+    <select id="letterFilter">
+      <option value="">All Letters</option>
+    </select>
+
+    <select id="populationFilter">
+      <option value="">All Populations</option>
+      <option value="small">&lt; 1M</option>
+      <option value="medium">1M - 10M</option>
+      <option value="large">10M - 100M</option>
+      <option value="huge">&gt; 100M</option>
+    </select>
+
+  </div>
+  <div id="highlighted-country"></div>
+  <div id="countries"></div>
+
+  <footer class="footer" id="footer"><a href="https://github.com/ArnoldEloiBM">ArnoldEloiBM.</a> &copy;2025 Copyright.</footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
