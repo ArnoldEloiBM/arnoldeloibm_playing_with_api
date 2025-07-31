@@ -1,23 +1,17 @@
-# Use nginx as base image
-FROM nginx:alpine
+# lightweight Node.js image
+FROM node:18-alpine
 
-# Install curl for health checks
-RUN apk add --no-cache curl
+# Set working directory inside container
+WORKDIR /app
 
-# Copy the application files to nginx's default serving directory
-COPY index.html /usr/share/nginx/html/
-COPY style.css /usr/share/nginx/html/
-COPY script.js /usr/share/nginx/html/
+# Copy all files from project to the container
+COPY . .
 
-# Create a custom nginx configuration
-COPY nginx.conf /etc/nginx/nginx.conf
+# Install http-server to serve the app
+RUN npm install -g http-server
 
-# Expose port 8080 (configurable)
+# Expose port 8080
 EXPOSE 8080
 
-# Health check to ensure the application is running
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:8080/ || exit 1
-
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"] 
+# Run http-server on port 8080 with CORS and better options
+CMD ["http-server", ".", "-p", "8080", "-a", "0.0.0.0", "--cors", "-c-1"]
