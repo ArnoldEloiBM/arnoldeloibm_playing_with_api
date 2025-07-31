@@ -88,7 +88,16 @@ The deployment process presented significant challenges with the traditional Wak
 
 For high availability and performance, this project includes a custom load balancer that distributes traffic across multiple web servers.
 
-**Load Balancer Repository**: [(https://github.com/ArnoldEloiBM/arnoldeloibm-lb)]
+### 🚀 Live Services
+
+**Load Balancer**: [https://arnoldeloibm-lb.onrender.com](https://arnoldeloibm-lb.onrender.com)
+- **GitHub Repository**: [https://github.com/ArnoldEloiBM/arnoldeloibm-lb](https://github.com/ArnoldEloiBM/arnoldeloibm-lb)
+
+**Web Servers**:
+- **Web01**: [https://my-web-app-countries-v1.onrender.com](https://my-web-app-countries-v1.onrender.com)
+- **Web02**: [https://my-web-app-countries-v1-1.onrender.com](https://my-web-app-countries-v1-1.onrender.com)
+
+### Load Balancer Features
 
 The load balancer ensures:
 - **High Availability**: Traffic distribution across multiple servers
