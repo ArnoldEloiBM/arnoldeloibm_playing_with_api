@@ -5,7 +5,7 @@ const loadcountryAPI = () => {
     fetch(`https://restcountries.com/v3.1/all?fields=name,capital,population,flags,region`)
     .then(res => res.json())
     .then(data => {
-        allCountries = data;
+        allCountries = data; 
         filteredCountries = data;
         populateRegionFilter();
         populateLetterFilter();
